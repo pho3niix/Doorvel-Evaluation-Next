@@ -1,5 +1,6 @@
 # NextJS To-Do List App
 Está aplicación brinda al usuario la capacidad de registrar, editar, leer y eliminar Notas con título y descripción en forma de tarjeta además de incluir una barra de búsqueda para facilitar el uso.
+Incluye casos de prueba desarrollados en Jest bajo el estandar TDD (Test Driven Development).
 
 ## Setup with Docker (recommended)
 ```bash
