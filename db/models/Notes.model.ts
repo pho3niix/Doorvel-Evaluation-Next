@@ -3,10 +3,8 @@ import { Database } from '../db';
 
 export interface INotes {
     NoteId?: string;
-    // UserId: string;
     Title: string;
     Description: string;
-    // IsActive?: string;
     IsDone: boolean;
     CreatedAt?: Date;
     UpdatedAt?: Date;
@@ -14,10 +12,8 @@ export interface INotes {
 
 class Notes extends Model<InferAttributes<Notes>, InferCreationAttributes<Notes>>{
     declare NoteId: string;
-    // // declare UserId: ForeignKey<Users['UserId']>;
     declare Title: string;
     declare Description: string;
-    // declare IsActive: string;
     declare CreatedAt: Date;
     declare UpdatedAt: Date;
     declare IsDone: boolean;
@@ -37,16 +33,6 @@ Notes.init(
                 }
             }
         },
-        // UserId: {
-        //     type: DataTypes.UUID,
-        //     allowNull: true,
-        //     validate: {
-        //         isUUID: {
-        //             args: 4,
-        //             msg: 'Please, input an UUID value for User id.'
-        //         }
-        //     }
-        // },
         Title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -71,11 +57,6 @@ Notes.init(
                 },
             }
         },
-        // IsActive: {
-        //     type: DataTypes.BOOLEAN,
-        //     allowNull: false,
-        //     defaultValue: true
-        // },
         CreatedAt: {
             type: DataTypes.DATE,
             defaultValue: Database.literal('CURRENT_TIMESTAMP')
